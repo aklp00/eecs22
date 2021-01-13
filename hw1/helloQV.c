@@ -1,14 +1,13 @@
 /********************************************/
 /* helloQV.c: our first C submission        */
-/* authors: QV Dang, <your name here>       */
+/* authors: QV Dang, Akhil Pappu            */
 /*                                          */
 /* modifications:                           */
-/* 2021/01/06 Akhil Fixed error messages    */
+/* 2021/01/06 Akhil Fixed compiler errors   */
 /* 2020/08/03   QV  Updated version         */
 /* 2018/09/25   QV  Initial version         */
 /********************************************/
-
-#include <stdio.h> 
+#include <stdio.h>
 // function that prints out a hello
 int main(void) 
 {
