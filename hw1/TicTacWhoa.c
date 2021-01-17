@@ -66,7 +66,7 @@ void wincondition() {
 		if(board[i][0] != ' ' && board[i][1] != ' ' && board[i][2] != ' ') { 
 			if(board[i][0]==board[i][1] && board[i][0]==board[i][2]) {
 				printboard();
-				printf("Player %c wins!\n", icon);
+				printf("Player %c wins!\n\n", icon);
 				win++;
 			}
 		}
@@ -76,7 +76,7 @@ void wincondition() {
 		if(board[0][i] != ' ' && board[1][i] != ' ' && board[2][i] != ' ') { 
 			if(board[0][i]==board[1][i] && board[1][i]==board[2][i]) { 
 				printboard();		
-				printf("Player %c wins!\n", icon);
+				printf("Player %c wins!\n\n", icon);
 				win++;
 			}
 		} 		
@@ -86,7 +86,7 @@ void wincondition() {
 		if(board[i][i] != ' ') { 
 			if(board[i][i] == board[i+1][i+1] && board[i][i] == board[i+2][i+2]) { 
 				printboard();	
-				printf("Player %c wins!\n",icon);
+				printf("Player %c wins!\n\n",icon);
 				win++;
 			}
 		}
@@ -95,7 +95,7 @@ void wincondition() {
 	if(board[0][2] != ' ' && board[1][1] != 0 && board[2][0] != 0) {
 		if(board[0][2] == board[1][1] && board[0][2] == board[2][0]) { 
 			printboard();
-			printf("Player %c wins!\n", icon);
+			printf("Player %c wins!\n\n", icon);
 			win++;
 		}
 	}
@@ -104,12 +104,21 @@ void wincondition() {
 /*getting computer move*/
 void computermove() {
 	int i, j, upd = 0;
+	char d;
 	for(i=0; i < 3; i++) { 
 		for(j=0; j < 3; j++) { 
 			if(board[i][j] == ' ') { 
 				while(upd == 0) {	
 					board[i][j] = icon;
-				 	upd++;
+				 	if(i == 0) { 
+						d = 'C';
+					} if(i == 1) { 
+						d = 'B';
+					} if(i == 2) { 
+						d = 'A';
+					} 
+					printf("Player %c (AI) chose %c%d\n", icon, d, j+1);
+					upd++;
 				}
 			}
 		}
@@ -200,7 +209,7 @@ void hvh() {
 		wincondition(); 		
 		ct++;
 		if(ct == 9 && win == 0) { 
-			printf("The game is a tie!\n");
+			printf("The game is a tie!\n\n");
 		}
 	}
  
@@ -266,6 +275,7 @@ int main(void) {
 		printf("4. Exit Game\n");
 		printf("Choose Option: ");
 		scanf("%s", &opt);
+		printf("\n");
 		switch(opt) { 
 			case '1' : 
 				hvh();
