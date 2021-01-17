@@ -12,7 +12,7 @@
 char RED[] =  "\x1b[31m";
 char END[] = "\x1b[m";
 char GREEN[] = "\x1b[32m";
-char WHITE[] = " ";
+char WHITE[] = "";
 
 /*global variables*/
 char board[3][3];
@@ -221,6 +221,7 @@ void hvc () {
 				icon = s1;
 				playermove();
 			} else {
+				strcpy(c2, store2);
 				icon = s2;
 				computermove();
 			}

@@ -1,0 +1,231 @@
+Script started on Sat 16 Jan 2021 06:22:28 PM PST
+]0;apappu@crystalcove:hw1[apappu@crystalcove hw1]$ exit./tictacwhoa[27G[39@gcc TicTacWhoa.c -ansi -std=c99 -Wall -o [78G
+]0;apappu@crystalcove:hw1[apappu@crystalcove hw1]$ ./tictacwhoa 
+Welcome to Secure-Tic-Tac-Whoa!
+1. Start New Game (Human v. Human)
+2. Start New Game (Human v. AI)
+3. Game Settings
+4. Exit Game
+Choose Option: 3
+Current icon for Player 1 is X. Current icon for Player 2 is O.
+Would you like to change the icon you are using? (Y/N) Y
+What icon do you want to use to represent Player 1? A
+What icon do you want to use to represent Player 2? B
+Current color for Player 1 is white. Current color for Player 2 is white.
+Would you like to change the icon color? (Y/N) Y
+What color would you like to represent Player 1? (R)ed/(G)reen/(W)hite: R
+What color would you like to represent Player 2? (R)ed/(G)reen/(W)hite: G
+Welcome to Secure-Tic-Tac-Whoa!
+1. Start New Game (Human v. Human)
+2. Start New Game (Human v. AI)
+3. Game Settings
+4. Exit Game
+Choose Option: 1
+Human v. Human game started
+C  | | 
+  -----
+B  | | 
+  -----
+A  | | 
+  1 2 3
+Player A, please choose your move: C1
+Player A chose C1
+C [31mA[m| | 
+  -----
+B  | | 
+  -----
+A  | | 
+  1 2 3
+Player B, please choose your move: B2
+Player B chose B2
+C [31mA[m| | 
+  -----
+B  |[32mB[m| 
+  -----
+A  | | 
+  1 2 3
+Player A, please choose your move: C2
+Player A chose C2
+C [31mA[m|[31mA[m| 
+  -----
+B  |[32mB[m| 
+  -----
+A  | | 
+  1 2 3
+Player B, please choose your move: C3
+Player B chose C3
+C [31mA[m|[31mA[m|[32mB[m
+  -----
+B  |[32mB[m| 
+  -----
+A  | | 
+  1 2 3
+Player A, please choose your move: B A1
+Player A chose A1
+C [31mA[m|[31mA[m|[32mB[m
+  -----
+B  |[32mB[m| 
+  -----
+A [31mA[m| | 
+  1 2 3
+Player B, please choose your move: B3
+Player B chose B3
+C [31mA[m|[31mA[m|[32mB[m
+  -----
+B  |[32mB[m|[32mB[m
+  -----
+A [31mA[m| | 
+  1 2 3
+Player A, please choose your move: B1
+Player A chose B1
+C [31mA[m|[31mA[m|[32mB[m
+  -----
+B [31mA[m|[32mB[m|[32mB[m
+  -----
+A [31mA[m| | 
+  1 2 3
+Player A wins!
+Welcome to Secure-Tic-Tac-Whoa!
+1. Start New Game (Human v. Human)
+2. Start New Game (Human v. AI)
+3. Game Settings
+4. Exit Game
+Choose Option: 3
+Current icon for Player 1 is A. Current icon for Player 2 is B.
+Would you like to change the icon you are using? (Y/N) N
+Current color for Player 1 is red. Current color for Player 2 is green.
+Would you like to change the icon color? (Y/N) Y
+What color would you like to represent Player 1? (R)ed/(G)reen/(W)hite: R G
+What color would you like to represent Player 2? (R)ed/(G)reen/(W)hite: W
+Welcome to Secure-Tic-Tac-Whoa!
+1. Start New Game (Human v. Human)
+2. Start New Game (Human v. AI)
+3. Game Settings
+4. Exit Game
+Choose Option: 2
+Human v. AI game started
+Would you like to be Player 1 or Player 2? 1
+C  | | 
+  -----
+B  | | 
+  -----
+A  | | 
+  1 2 3
+Player A, please choose your move: C1
+Player A chose C1
+C [32mA[m| | 
+  -----
+B  | | 
+  -----
+A  | | 
+  1 2 3
+C [32mA[m|B[m| 
+  -----
+B  | | 
+  -----
+A  | | 
+  1 2 3
+Player A, please choose your move: B1
+Player A chose B1
+C [32mA[m|B[m| 
+  -----
+B [32mA[m| | 
+  -----
+A  | | 
+  1 2 3
+C [32mA[m|B[m|B[m
+  -----
+B [32mA[m| | 
+  -----
+A  | | 
+  1 2 3
+Player A, please choose your move: A1
+Player A chose A1
+C [32mA[m|B[m|B[m
+  -----
+B [32mA[m| | 
+  -----
+A [32mA[m| | 
+  1 2 3
+Player A wins!
+Welcome to Secure-Tic-Tac-Whoa!
+1. Start New Game (Human v. Human)
+2. Start New Game (Human v. AI)
+3. Game Settings
+4. Exit Game
+Choose Option: 3
+Current icon for Player 1 is A. Current icon for Player 2 is B.
+Would you like to change the icon you are using? (Y/N) Y
+What icon do you want to use to represent Player 1? X U
+What icon do you want to use to represent Player 2? V
+Current color for Player 1 is green. Current color for Player 2 is white.
+Would you like to change the icon color? (Y/N) Y
+What color would you like to represent Player 1? (R)ed/(G)reen/(W)hite: W
+What color would you like to represent Player 2? (R)ed/(G)reen/(W)hite: R
+Welcome to Secure-Tic-Tac-Whoa!
+1. Start New Game (Human v. Human)
+2. Start New Game (Human v. AI)
+3. Game Settings
+4. Exit Game
+Choose Option: 2
+Human v. AI game started
+Would you like to be Player 1 or Player 2? 2
+C  | | 
+  -----
+B  | | 
+  -----
+A  | | 
+  1 2 3
+C U[m| | 
+  -----
+B  | | 
+  -----
+A  | | 
+  1 2 3
+Player V, please choose your move: B2
+Player V chose B2
+C U[m| | 
+  -----
+B  |[31mV[m| 
+  -----
+A  | | 
+  1 2 3
+C U[m|U[m| 
+  -----
+B  |[31mV[m| 
+  -----
+A  | | 
+  1 2 3
+Player V, please choose your move: C3
+Player V chose C3
+C U[m|U[m|[31mV[m
+  -----
+B  |[31mV[m| 
+  -----
+A  | | 
+  1 2 3
+C U[m|U[m|[31mV[m
+  -----
+B U[m|[31mV[m| 
+  -----
+A  | | 
+  1 2 3
+Player V, please choose your move: A1
+Player V chose A1
+C U[m|U[m|[31mV[m
+  -----
+B U[m|[31mV[m| 
+  -----
+A [31mV[m| | 
+  1 2 3
+Player V wins!
+Welcome to Secure-Tic-Tac-Whoa!
+1. Start New Game (Human v. Human)
+2. Start New Game (Human v. AI)
+3. Game Settings
+4. Exit Game
+Choose Option: 4
+]0;apappu@crystalcove:hw1[apappu@crystalcove hw1]$ exit
+exit
+
+Script done on Sat 16 Jan 2021 06:24:46 PM PST

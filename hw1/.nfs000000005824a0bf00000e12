@@ -1,0 +1,200 @@
+Script started on Sat 16 Jan 2021 05:56:45 PM PST
+]0;apappu@crystalcove:hw1[apappu@crystalcove hw1]$ vim board.c[27G./board[K[27G[34@gcc board.c -ansi -std=c99 -Wall -o [68G[27G./tictacwhoa[K[27Gvi TicTacWhoa.c[27Ggcc TicTacWhoa.c -ansi -std=c99 -Wall -o tictacwhoa
+]0;apappu@crystalcove:hw1[apappu@crystalcove hw1]$ ./tictacwhoa 
+Welcome to Secure-Tic-Tac-Whoa!
+1. Start New Game (Human v. Human)
+2. Start New Game (Human v. AI)
+3. Game Settings
+4. Exit Game
+Choose Option: 3
+Current icon for Player 1 is X. Current icon for Player 2 is O.
+Would you like to change the icon you are using? (Y/N) Y
+What icon do you want to use to represent Player 1? A
+What icon do you want to use to represent Player 2? B
+Current color for Player 1 is white. Current color for Player 2 is white.
+Would you like to change the icon color? (Y/N) Y
+What color would you like to represent Player 1? (R)ed/(G)reen/(W)hite: R
+What color would you like to represent Player 2? (R)ed/(G)reen/(W)hite: G
+Welcome to Secure-Tic-Tac-Whoa!
+1. Start New Game (Human v. Human)
+2. Start New Game (Human v. AI)
+3. Game Settings
+4. Exit Game
+Choose Option: 2
+Human v. AI game started
+Would you like to be Player 1 or Player 2? 1
+C  | | 
+  -----
+B  | | 
+  -----
+A  | | 
+  1 2 3
+Player A, please choose your move: C1
+Player A chose C1
+C [31mA[m| | 
+  -----
+B  | | 
+  -----
+A  | | 
+  1 2 3
+C [31mA[m|[32mB[m| 
+  -----
+B  | | 
+  -----
+A  | | 
+  1 2 3
+Player A, please choose your move: B1
+Player A chose B1
+C [31mA[m|[32mB[m| 
+  -----
+B [31mA[m| | 
+  -----
+A  | | 
+  1 2 3
+C [31mA[m|[32mB[m|[32mB[m
+  -----
+B [31mA[m| | 
+  -----
+A  | | 
+  1 2 3
+Player A, please choose your move: A1
+Player A chose A1
+C [31mA[m|[32mB[m|[32mB[m
+  -----
+B [31mA[m| | 
+  -----
+A [31mA[m| | 
+  1 2 3
+Player A wins!
+Welcome to Secure-Tic-Tac-Whoa!
+1. Start New Game (Human v. Human)
+2. Start New Game (Human v. AI)
+3. Game Settings
+4. Exit Game
+Choose Option: 1
+Human v. Human game started
+C  | | 
+  -----
+B  | | 
+  -----
+A  | | 
+  1 2 3
+Player A, please choose your move: C1
+Player A chose C1
+C [31mA[m| | 
+  -----
+B  | | 
+  -----
+A  | | 
+  1 2 3
+Player B, please choose your move: C4
+Player B chose C4
+C [31mA[m| | 
+  -----
+B [32mB[m| | 
+  -----
+A  | | 
+  1 2 3
+Player A, please choose your move: C2
+Player A chose C2
+C [31mA[m|[31mA[m| 
+  -----
+B [32mB[m| | 
+  -----
+A  | | 
+  1 2 3
+Player B, please choose your move: A2
+Player B chose A2
+C [31mA[m|[31mA[m| 
+  -----
+B [32mB[m| | 
+  -----
+A  |[32mB[m| 
+  1 2 3
+Player A, please choose your move: C3
+Player A chose C3
+C [31mA[m|[31mA[m|[31mA[m
+  -----
+B [32mB[m| | 
+  -----
+A  |[32mB[m| 
+  1 2 3
+Player A wins!
+Welcome to Secure-Tic-Tac-Whoa!
+1. Start New Game (Human v. Human)
+2. Start New Game (Human v. AI)
+3. Game Settings
+4. Exit Game
+Choose Option: 2
+Human v. AI game started
+Would you like to be Player 1 or Player 2? 2
+C  | | 
+  -----
+B  | | 
+  -----
+A  | | 
+  1 2 3
+C [31mA[m| | 
+  -----
+B  | | 
+  -----
+A  | | 
+  1 2 3
+Player B, please choose your move: C2
+Player B chose C2
+C [31mA[m|[32mB[m| 
+  -----
+B  | | 
+  -----
+A  | | 
+  1 2 3
+C [31mA[m|[32mB[m|[31mA[m
+  -----
+B  | | 
+  -----
+A  | | 
+  1 2 3
+Player B, please choose your move: B2
+Player B chose B2
+C [31mA[m|[32mB[m|[31mA[m
+  -----
+B  |[32mB[m| 
+  -----
+A  | | 
+  1 2 3
+C [31mA[m|[32mB[m|[31mA[m
+  -----
+B [31mA[m|[32mB[m| 
+  -----
+A  | | 
+  1 2 3
+Player B, please choose your move: A2
+Player B chose A2
+C [31mA[m|[32mB[m|[31mA[m
+  -----
+B [31mA[m|[32mB[m| 
+  -----
+A  |[32mB[m| 
+  1 2 3
+Player B wins!
+Welcome to Secure-Tic-Tac-Whoa!
+1. Start New Game (Human v. Human)
+2. Start New Game (Human v. AI)
+3. Game Settings
+4. Exit Game
+Choose Option: 4
+]0;apappu@crystalcove:hw1[apappu@crystalcove hw1]$ 
+[K]0;apappu@crystalcove:hw1[apappu@crystalcove hw1]$ ls 
+board.c  [0m[01;32mhelloQV[0m  helloQV.c  TicTacReadMe.txt  [01;32mtictacwhoa[0m  TicTacWhoa.c  TicTacWhoa.script
+[m]0;apappu@crystalcove:hw1[apappu@crystalcove hw1]$ Ti c[KcTacWhoa.s[K[K[K[K[K[K[K[K[K[K[K[Kvim T
+TicTacReadMe.txt   TicTacWhoa.c       TicTacWhoa.script  
+]0;apappu@crystalcove:hw1[apappu@crystalcove hw1]$ vim TicTacW
+TicTacWhoa.c       TicTacWhoa.script  
+]0;apappu@crystalcove:hw1[apappu@crystalcove hw1]$ vim TicTacWhoa.script 
+[?1000h[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H[1;40r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[40;1H"TicTacWhoa.script" 0L, 0C[>c[1;1H[33m  1 [m
+[1m[34m~                                                                                                                                    [3;1H~                                                                                                                                    [4;1H~                                                                                                                                    [5;1H~                                                                                                                                    [6;1H~                                                                                                                                    [7;1H~                                                                                                                                    [8;1H~                                                                                                                                    [9;1H~                                                                                                                                    [10;1H~                                                                                                                                    [11;1H~                                                                                                                                    [12;1H~                                                                                                                                    [13;1H~                                                                                                                                    [14;1H~                                                                                                                                    [15;1H~                                                                                                                                    [16;1H~                                                                                                                                    [17;1H~                                                                                                                                    [18;1H~                                                                                                                                    [19;1H~                                                                                                                                    [20;1H~                                                                                                                                    [21;1H~                                                                                                                                    [22;1H~                                                                                                                                    [23;1H~                                                                                                                                    [24;1H~                                                                                                                                    [25;1H~                                                                                                                                    [26;1H~                                                                                                                                    [27;1H~                                                                                                                                    [28;1H~                                                                                                                                    [29;1H~                                                                                                                                    [30;1H~                                                                                                                                    [31;1H~                                                                                                                                    [32;1H~                                                                                                                                    [33;1H~                                                                                                                                    [34;1H~                                                                                                                                    [35;1H~                                                                                                                                    [36;1H~                                                                                                                                    [37;1H~                                                                                                                                    [38;1H~                                                                                                                                    [39;1H~                                                                                                                                    [m[40;116H0,0-1[9CAll[1;5H[?12l[?25h[27m[m[H[2J[?25l[1;1H[33m  1 [m
+[1m[34m~                                                                                                                                    [3;1H~                                                                                                                                    [4;1H~                                                                                                                                    [5;1H~                                                                                                                                    [6;1H~                                                                                                                                    [7;1H~                                                                                                                                    [8;1H~                                                                                                                                    [9;1H~                                                                                                                                    [10;1H~                                                                                                                                    [11;1H~                                                                                                                                    [12;1H~                                                                                                                                    [13;1H~                                                                                                                                    [14;1H~                                                                                                                                    [15;1H~                                                                                                                                    [16;1H~                                                                                                                                    [17;1H~                                                                                                                                    [18;1H~                                                                                                                                    [19;1H~                                                                                                                                    [20;1H~                                                                                                                                    [21;1H~                                                                                                                                    [22;1H~                                                                                                                                    [23;1H~                                                                                                                                    [24;1H~                                                                                                                                    [25;1H~                                                                                                                                    [26;1H~                                                                                                                                    [27;1H~                                                                                                                                    [28;1H~                                                                                                                                    [29;1H~                                                                                                                                    [30;1H~                                                                                                                                    [31;1H~                                                                                                                                    [32;1H~                                                                                                                                    [33;1H~                                                                                                                                    [34;1H~                                                                                                                                    [35;1H~                                                                                                                                    [36;1H~                                                                                                                                    [37;1H~                                                                                                                                    [38;1H~                                                                                                                                    [39;1H~                                                                                                                                    [m[40;116H0,0-1[9CAll"TicTacWhoa.script" 0L, 0C[1;5H[?12l[?25h[?1000l[?1002h[?25l[40;1HType  :quit<Enter>  to exit Vim[40;116H[K[40;116H0,0-1[9CAll[1;5H[?12l[?25h[?25l[40;1H[K[40;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l[?1002l"TicTacWhoa.script" 0L, 0C written
+[?1l>[?12l[?25h[?1049l]0;apappu@crystalcove:hw1[apappu@crystalcove hw1]$ exit 
+exit
+
+Script done on Sat 16 Jan 2021 05:59:52 PM PST
