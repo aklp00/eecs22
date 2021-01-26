@@ -20,7 +20,7 @@ char icon; int win;
 char s1 = 'X', s2 = 'O';  
 char c1[8], c1e[8], c2[8], c2e[8], store1[8], store2[8];
 char color1[] = "white", color2[] = "white";
-int ct = 0;
+int ct = 0; 
 
 /*initializing empty spaces in the array*/
 void boardinit() {
