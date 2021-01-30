@@ -1,11 +1,11 @@
 /*********************************************************************/
 /* PhotoLab.c: Assignment 2 for EECS 22, Winter 2020                 */
-/* 								     */
-/* modifications: 						     */
+/* 								     								 */
+/* modifications: 						     						 */
 /* 01/13/21     QV  Adjusted for W21                                 */
-/* 01/11/20 	WL	adjusted for W20			     */
-/* 10/1/18  	MC  adjusted for F18			             */
-/* 09/27/17 	RD	adjusted for lecture usage		     */
+/* 01/11/20 	WL	adjusted for W20			     				 */
+/* 10/1/18  	MC  adjusted for F18			             	 	 */
+/* 09/27/17 	RD	adjusted for lecture usage		      			 */
 /*********************************************************************/
 /* Enter your name, last name and UCInet ID below: 
  * ***************************************************************** *
@@ -65,6 +65,44 @@ int main(void)
     unsigned char   R[WIDTH][HEIGHT];
     unsigned char   G[WIDTH][HEIGHT];
     unsigned char   B[WIDTH][HEIGHT];
+	int choice; 
+	char flen[SLEN];
+	printf("\nWelcome to PhotoLab 2021 - v1!\n");
+	printf("-----------------------------------------\n");
+	while(choice != 99) { 
+		PrintMenu();
+		scanf("%d", &choice);
+		switch(choice) { 
+			case 1: 
+				printf("Please input the file name to load: ");
+				scanf("%s", flen);
+				LoadImage(flen, R, G, B);
+				continue;
+			case 2: 
+				printf("Please input the file name to save: ");
+				scanf("%s", flen);
+				SaveImage(flen, R, G, B);
+				continue;
+			case 3: 
+				Aging(R, G, B);
+				printf("Aging tested!\n\n");
+				continue;
+			case 4:
+				EdgeDetection(R, G, B); 
+				printf("Edge Detection tested!\n\n");
+				continue;
+			case 5: 
+				Sharpen(R, G, B);
+				printf("Sharpen tested!\n\n");
+				continue;
+			case 22: 
+			 	AutoTest(R, G, B);
+				continue;
+			case 99: 
+				break; 
+		}
+	}
+	return 0;
 
     /* Please replace the following code with proper menu  */
     /* with function calls for DIP operations	           */
@@ -72,10 +110,10 @@ int main(void)
     // this command is here temporarily so you can see it works
     // only does aging function by default with lambo.ppm file
     // remove before writing your program
-    AutoTest(R, G, B);
+
 
     /* End of replacing */
-    return 0;
+
 }
 
 /* takes in a file name without extension */
@@ -197,10 +235,12 @@ void AutoTest(unsigned char R[WIDTH][HEIGHT], unsigned char G[WIDTH][HEIGHT], un
     Aging(R, G, B);
     SaveImage("aging", R, G, B);
     printf("Aging tested!\n\n");
+
     LoadImage("lambo", R, G, B); 
     EdgeDetection(R, G, B); 
 	SaveImage("edge", R, G, B);
 	printf("Edge Detection tested!\n\n");
+
 	LoadImage("lambo", R, G, B);
 	Sharpen(R, G, B);
 	SaveImage("sharpen", R, G, B);
@@ -244,13 +284,13 @@ void EdgeDetection(unsigned char R[WIDTH][HEIGHT], unsigned char G[WIDTH][HEIGHT
 	
     for(x = 0; x < WIDTH; x++) { 
 		for(y = 0; y < HEIGHT; y++) { 
-	    	red   = 8*Rc[x][y]-Rc[x-1][y-1]-Rc[x][y-1]-Rc[x+1][y-1]-Rc[x-1][y]-Rc[x+1][y]-Rc[x-1][y+1]-Rc[x][y+1]
+	    	red    = 8*Rc[x][y]-Rc[x-1][y-1]-Rc[x][y-1]-Rc[x+1][y-1]-Rc[x-1][y]-Rc[x+1][y]-Rc[x-1][y+1]-Rc[x][y+1]
 					-Rc[x+1][y+1];
 	    	green  = 8*Gc[x][y]-Gc[x-1][y-1]-Gc[x][y-1]-Gc[x+1][y-1]-Gc[x-1][y]-Gc[x+1][y]-Gc[x-1][y+1]-Gc[x][y+1]
 					-Gc[x+1][y+1];
 	    	blue = 8*Bc[x][y]-Bc[x-1][y-1]-Bc[x][y-1]-Bc[x+1][y-1]-Bc[x-1][y]-Bc[x+1][y]-Bc[x-1][y+1]-Bc[x][y+1]
 					-Bc[x+1][y+1];
-			if((x < 8 || y < 8) || (x > 592 || y > 392))  { 
+			if((x < 2 || y < 2) || (x > 598 || y > 398))  { 
 				red = 0; 
 				blue = 0;
 				green =0;
@@ -296,17 +336,12 @@ void Sharpen(unsigned char R[WIDTH][HEIGHT], unsigned char G[WIDTH][HEIGHT], uns
 	
     for(y = 1; y < HEIGHT-1; y++) { 
 		for(x = 1; x < WIDTH-1; x++) { 
-	    	red   = 9*Rc[x][y]-Rc[x-1][y-1]-Rc[x][y-1]-Rc[x+1][y-1]-Rc[x-1][y]-Rc[x+1][y]-Rc[x-1][y+1]-Rc[x][y+1]
+	    	red    = 9*Rc[x][y]-Rc[x-1][y-1]-Rc[x][y-1]-Rc[x+1][y-1]-Rc[x-1][y]-Rc[x+1][y]-Rc[x-1][y+1]-Rc[x][y+1]
 					-Rc[x+1][y+1];
 	    	green  = 9*Gc[x][y]-Gc[x-1][y-1]-Gc[x][y-1]-Gc[x+1][y-1]-Gc[x-1][y]-Gc[x+1][y]-Gc[x-1][y+1]-Gc[x][y+1]
 					-Gc[x+1][y+1];
 	    	blue = 9*Bc[x][y]-Bc[x-1][y-1]-Bc[x][y-1]-Bc[x+1][y-1]-Bc[x-1][y]-Bc[x+1][y]-Bc[x-1][y+1]-Bc[x][y+1]
 					-Bc[x+1][y+1];
-		/*	if((x < 8 || y < 8) || (x > 592 || y > 392))  { 
-				red = 0; 
-				blue = 0;
-				green =0;
-			}*/
 			if(red < 0){ 
 				red = 0; 
 			} if(red > 255){ 
@@ -323,7 +358,7 @@ void Sharpen(unsigned char R[WIDTH][HEIGHT], unsigned char G[WIDTH][HEIGHT], uns
 				green = 255;
 			}
 			R[x][y] = red;
-			B[x][y] = blue; 
+  			B[x][y] = blue; 
 			G[x][y] = green;
 		}
 	}
@@ -331,9 +366,21 @@ void Sharpen(unsigned char R[WIDTH][HEIGHT], unsigned char G[WIDTH][HEIGHT], uns
 
 void PrintMenu(void)
 {
-printf("Welcome to PhotoLab! Here are the image filters you can use:\n");
-
+	printf("\n");
+	printf(" 1: Load PPM image\n");
+	printf(" 2: Save image in PPM and JPEG format\n");
+	printf(" 3: Run aging filter\n");
+	printf(" 4: Run edge detection filter\n");
+	printf(" 5: Run sharpen filter\n");
+	printf("22: Test all functions\n");
+	printf("99: Exit\n");
+	printf("-----------------------------------------\n");
+	printf("Please make your choice: ");
 }
+
+
+	
+
 
 /* MORE COMING SOON */
 

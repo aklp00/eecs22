@@ -1,0 +1,6 @@
+This assignment is the first version of the PhotoLab Assignment. It implements a sharpen function, aging function, 
+edge detection function, as well as a menu function that allows the user to select the operation to perform on the image. 
+The LoadImage and SaveImage functions allow the user to save the operated image into a separate file, which is then 
+viewable on the Bondi server. The way I implemented the required functions (Sharpen, Edge Detection, PrintMenu) were as follows.
+For Sharpen, I multiplied each target pixel by nine and subtracted the value of each surrounding pixel. For Edge Detection,
+I did a similar operation, except instead of multiplying the target pixel by 8, I multiplied 

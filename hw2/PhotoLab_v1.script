@@ -1,0 +1,157 @@
+Script started on Fri 29 Jan 2021 05:29:02 PM PST
+]0;apappu@crystalcove:hw2[apappu@crystalcove hw2]$ !gcc
+gcc PhotoLab_v1.c -g -Wall -ansi -std=c99 -o plab
+]0;apappu@crystalcove:hw2[apappu@crystalcove hw2]$ ./plab 
+
+Welcome to PhotoLab 2021 - v1!
+-----------------------------------------
+
+ 1: Load PPM image
+ 2: Save image in PPM and JPEG format
+ 3: Run aging filter
+ 4: Run edge detection filter
+ 5: Run sharpen filter
+22: Test all functions
+99: Exit
+-----------------------------------------
+Please make your choice: 1
+Please input the file name to load: lambo
+lambo.ppm was read successfully!
+
+ 1: Load PPM image
+ 2: Save image in PPM and JPEG format
+ 3: Run aging filter
+ 4: Run edge detection filter
+ 5: Run sharpen filter
+22: Test all functions
+99: Exit
+-----------------------------------------
+Please make your choice: 3
+Aging tested!
+
+
+ 1: Load PPM image
+ 2: Save image in PPM and JPEG format
+ 3: Run aging filter
+ 4: Run edge detection filter
+ 5: Run sharpen filter
+22: Test all functions
+99: Exit
+-----------------------------------------
+Please make your choice: 2
+Please input the file name to save: aging
+aging.ppm was saved successfully. 
+aging.jpg was stored for viewing. 
+
+ 1: Load PPM image
+ 2: Save image in PPM and JPEG format
+ 3: Run aging filter
+ 4: Run edge detection filter
+ 5: Run sharpen filter
+22: Test all functions
+99: Exit
+-----------------------------------------
+Please make your choice: 1
+Please input the file name to load: lambo
+lambo.ppm was read successfully!
+
+ 1: Load PPM image
+ 2: Save image in PPM and JPEG format
+ 3: Run aging filter
+ 4: Run edge detection filter
+ 5: Run sharpen filter
+22: Test all functions
+99: Exit
+-----------------------------------------
+Please make your choice: 4
+Edge Detection tested!
+
+
+ 1: Load PPM image
+ 2: Save image in PPM and JPEG format
+ 3: Run aging filter
+ 4: Run edge detection filter
+ 5: Run sharpen filter
+22: Test all functions
+99: Exit
+-----------------------------------------
+Please make your choice: 2
+Please input the file name to save: edge
+edge.ppm was saved successfully. 
+edge.jpg was stored for viewing. 
+
+ 1: Load PPM image
+ 2: Save image in PPM and JPEG format
+ 3: Run aging filter
+ 4: Run edge detection filter
+ 5: Run sharpen filter
+22: Test all functions
+99: Exit
+-----------------------------------------
+Please make your choice: 1
+Please input the file name to load: lambo
+lambo.ppm was read successfully!
+
+ 1: Load PPM image
+ 2: Save image in PPM and JPEG format
+ 3: Run aging filter
+ 4: Run edge detection filter
+ 5: Run sharpen filter
+22: Test all functions
+99: Exit
+-----------------------------------------
+Please make your choice: 5
+Sharpen tested!
+
+
+ 1: Load PPM image
+ 2: Save image in PPM and JPEG format
+ 3: Run aging filter
+ 4: Run edge detection filter
+ 5: Run sharpen filter
+22: Test all functions
+99: Exit
+-----------------------------------------
+Please make your choice: 2
+Please input the file name to save: sharpen
+sharpen.ppm was saved successfully. 
+sharpen.jpg was stored for viewing. 
+
+ 1: Load PPM image
+ 2: Save image in PPM and JPEG format
+ 3: Run aging filter
+ 4: Run edge detection filter
+ 5: Run sharpen filter
+22: Test all functions
+99: Exit
+-----------------------------------------
+Please make your choice: 22
+lambo.ppm was read successfully!
+aging.ppm was saved successfully. 
+aging.jpg was stored for viewing. 
+Aging tested!
+
+lambo.ppm was read successfully!
+edge.ppm was saved successfully. 
+edge.jpg was stored for viewing. 
+Edge Detection tested!
+
+lambo.ppm was read successfully!
+sharpen.ppm was saved successfully. 
+sharpen.jpg was stored for viewing. 
+Sharpen tested!
+
+
+ 1: Load PPM image
+ 2: Save image in PPM and JPEG format
+ 3: Run aging filter
+ 4: Run edge detection filter
+ 5: Run sharpen filter
+22: Test all functions
+99: Exit
+-----------------------------------------
+Please make your choice: 99
+]0;apappu@crystalcove:hw2[apappu@crystalcove hw2]$ exit
+exit
+
+Script done on Fri 29 Jan 2021 05:30:10 PM PST
