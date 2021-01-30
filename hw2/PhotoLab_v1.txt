@@ -3,4 +3,7 @@ edge detection function, as well as a menu function that allows the user to sele
 The LoadImage and SaveImage functions allow the user to save the operated image into a separate file, which is then 
 viewable on the Bondi server. The way I implemented the required functions (Sharpen, Edge Detection, PrintMenu) were as follows.
 For Sharpen, I multiplied each target pixel by nine and subtracted the value of each surrounding pixel. For Edge Detection,
-I did a similar operation, except instead of multiplying the target pixel by 8, I multiplied 
+I did a similar operation, except instead of multiplying the target pixel by nine I multiplied it by 8. Lastly, for the 
+PrintMenu() function, I added printf() statements displaying the different operations available. In the main() function, I call 
+the PrintMenu() function and also allow user input to type in the image they want to load as well as the different operations 
+to perform on the image. 

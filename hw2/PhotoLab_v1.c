@@ -342,6 +342,12 @@ void Sharpen(unsigned char R[WIDTH][HEIGHT], unsigned char G[WIDTH][HEIGHT], uns
 					-Gc[x+1][y+1];
 	    	blue = 9*Bc[x][y]-Bc[x-1][y-1]-Bc[x][y-1]-Bc[x+1][y-1]-Bc[x-1][y]-Bc[x+1][y]-Bc[x-1][y+1]-Bc[x][y+1]
 					-Bc[x+1][y+1];
+			if((x < 2 || y < 2) || (x > 598 || y > 398))  { 
+				red = 0; 
+				blue = 0;
+				green =0;
+			}
+
 			if(red < 0){ 
 				red = 0; 
 			} if(red > 255){ 
