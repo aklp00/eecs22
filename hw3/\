@@ -1,0 +1,109 @@
+#include "FileIO.h" 
+#include "DIPs.h" 
+#include "Constants.h"
+
+#include <stdio.h> 
+#include <stdlib.h> 
+#include <string.h>
+#include <math.h> 
+
+void AutoTest(unsigned char R[WIDTH][HEIGHT], unsigned char G[WIDTH][HEIGHT], unsigned char B[WIDTH][HEIGHT]); 
+void PrintMenu(void); 
+
+int main(void) { 
+	unsigned char R[WIDTH][HEIGHT];
+	unsigned char G[WIDTH][HEIGHT];
+	unsigned char B[WIDTH][HEIGHT];
+
+	int option;
+	char fname[SLEN];
+
+	printf("Welcome to Pho Lab 2021 - v2!"); 
+	PrintMenu();
+	scanf("%d", &option);
+    int rc = -1;        // return code of LoadImage()
+
+    while (option != 99)
+    {   
+        // menu item 2-4 requires image is loaded first
+        if (option == 1)
+        {   printf("Please input the file name to load: ");
+            scanf("%s", fname);
+            rc = LoadImage(fname, R, G, B);
+        }
+        else if (option >= 2 && option <= 5)
+        {   if (rc != 0)
+            {   printf("No image was read.\n");
+            }
+            else
+            {   switch(option)
+                {   case 2:
+                        printf("Please input the file name to save: ");
+                        scanf("%s", fname);
+                        SaveImage(fname, R, G, B);
+                        break;
+                    case 3:
+                        Aging(R, G, B);
+                        printf("\"Aging\" operation is done!\n");
+                        break;
+                    case 4:
+                        EdgeDetection(R, G, B);
+                        printf("\"Edge Detection\" operation is done!\n");
+                        break;
+                    case 5:
+            		case 6: 
+						/*Noise filter here*/
+						break;
+					case 7: 
+						/*Posterize filter here*/
+						break;
+					case 8: 
+						/*Negative filter here*/
+						break;
+                    default:
+                        break;
+                }   
+            }
+        }
+        else if (option == 22)
+        {   AutoTest(R, G, B);
+        }
+        else
+        {   printf("Invalid selection!\n");
+        }
+} 	
+
+void PrintMenu()
+{   printf("\n-------------------------\n");
+    printf(" 1: Load a PPM image\n");
+    printf(" 2: Save the image in PPM and JPEG format\n");
+    printf(" 3: Run aging filter\n");
+    printf(" 4: Run edge detection filter\n");
+    printf(" 5: Run sharpen filter\n");
+    printf("22: Test all functions\n");
+    printf("99: Exit\n");
+    printf("--------------------------\n");
+    printf("Please make your choice: ");
+}
+
+void AutoTest(unsigned char R[WIDTH][HEIGHT], unsigned char G[WIDTH][HEIGHT], unsigned char B[WIDTH][HEIGHT])
+{
+
+    LoadImage("lambo", R, G, B);
+    Aging(R, G, B);
+    SaveImage("aging", R, G, B);
+    printf("Aging tested!\n\n");
+    
+    /* add more tests here ("edge" and "sharpen")*/
+    LoadImage("lambo", R, G, B);
+    EdgeDetection(R, G, B);
+    SaveImage("edge", R, G, B);
+    printf("Edge Detection tested!\n\n");
+    
+    LoadImage("lambo", R, G, B);
+    Sharpen(R, G, B);
+    SaveImage("sharpen", R, G, B);
+    printf("Sharpen tested!\n\n");
+    
+}
+
