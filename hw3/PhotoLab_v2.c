@@ -1,3 +1,16 @@
+/****************************************
+ * Name: Akhil Pappu (sole modifier)
+ * Professor QV Dang 
+ * Date: 16 February 2020
+ * Assignment 3: PhotoLab_v2
+ *
+ * Modifications: 
+ *  7 February 2020-Files decomposed
+ *  9 February 2020-Completed header files
+ * 11 Febraury 2020-Completed advanced image operations 
+ * 15 february 2020-Completed makefile and finished the assignment 
+******************************************/
+
 #include "FileIO.h" 
 #include "DIPs.h" 
 #include "Constants.h"
@@ -108,7 +121,7 @@ int main(void)
     /* End of replacing */
 	#endif
     return 0;
-}
+} /*end of main*/
 
 
 void PrintMenu()
@@ -129,7 +142,8 @@ void PrintMenu()
 
 void AutoTest(unsigned char R[WIDTH][HEIGHT], unsigned char G[WIDTH][HEIGHT], unsigned char B[WIDTH][HEIGHT])
 {
-    LoadImage("pigeon", R, G, B);
+	char fname[SLEN] = "pigeon";
+    LoadImage(fname, R, G, B);
     Aging(R, G, B);
     SaveImage("aging", R, G, B);
 	#ifdef DEBUG 
@@ -137,35 +151,35 @@ void AutoTest(unsigned char R[WIDTH][HEIGHT], unsigned char G[WIDTH][HEIGHT], un
     #endif 
 
     /* add more tests here ("edge" and "sharpen")*/
-    LoadImage("pigeon", R, G, B);
+    LoadImage(fname, R, G, B);
     EdgeDetection(R, G, B);
     SaveImage("edge", R, G, B);
 	#ifdef DEBUG
     printf("Edge Detection tested!\n\n");
     #endif 
 
-    LoadImage("pigeon", R, G, B);
+    LoadImage(fname, R, G, B);
     Sharpen(R, G, B);
     SaveImage("sharpen", R, G, B);
 	#ifdef DEBUG 
     printf("Sharpen tested!\n\n");
     #endif 
 
-   LoadImage("pigeon", R, G, B);
+   LoadImage(fname, R, G, B);
    Noise(30, R, G, B);
    SaveImage("noise", R, G, B);
    #ifdef DEBUG 
    printf("Noise tested!\n\n");
    #endif 
 
-   LoadImage("pigeon", R, G, B);
+   LoadImage(fname, R, G, B);
    NegativeFilter(R, G, B);
    SaveImage("negative", R, G, B);
    #ifdef DEBUG 
    printf("Negative tested!\n\n");
    #endif 
 
-   LoadImage("pigeon", R, G, B);
+   LoadImage(fname, R, G, B);
    Posterize(R, G, B, 7, 7, 7);
    SaveImage("posterize", R, G, B);
    #ifdef DEBUG 

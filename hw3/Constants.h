@@ -14,8 +14,11 @@
 
 #define WIDTH 600
 #define HEIGHT 400
-#define SLEN 64 
+#define SLEN 80 
 #define MAX_PIXEL 255
 #define MIN_PIXEL 0
+#define SUCCESS 0
+#define AUTOTEST 22
+#define EXIT 99
 
 #endif

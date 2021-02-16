@@ -1,0 +1,9 @@
+This iteration of the PhotoLab project is meant to be modular, but also adds some new functions fuch as Posterize, Noise, and 
+Negative. The Negative function inverts the colors of the image by subtracting 255 from each pixel value. The Noise function 
+adds'n' grains of white pixels, randomized by using the <time.h> header. The Posterize function takes in 3 inputs to 
+indicate the number of bits to be posterized, and then uses bitwise operators to change the appropriate number of bits.
+In the main function, I have IFDEF debugging enabled to run just the AutoTest (test all functions) function. I also
+have modules for the Advanced image library, Digital Image Processing (DIPs) library, and their corresponding header 
+files, as well as a constants header file to house all of the constants. Finally, my makefile compiles all the
+necessary output files, and also the executables. It has a clean target to clean out all output files, as well 
+as all images in the directory. 

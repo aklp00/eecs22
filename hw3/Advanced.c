@@ -1,12 +1,14 @@
 #include "Constants.h" 
 #include "Advanced.h" 
 
+
+/*changes each pixel to a negative version of itself (inverts it)*/
 void NegativeFilter(unsigned char R[WIDTH][HEIGHT], unsigned char G[WIDTH][HEIGHT], unsigned char B[WIDTH][HEIGHT]) { 
 	int x, y;
 	int Rn, Gn, Bn;
 	for(x=0; x < WIDTH; x++) { 
 		for(y=0; y < HEIGHT; y++) { 
-			Rn = 255 - R[x][y];
+			Rn = 255 - R[x][y];	/*subtracting every pixel from 255*/ 
 			Gn = 255 - G[x][y];
 			Bn = 255 - B[x][y]; 
 
@@ -17,15 +19,16 @@ void NegativeFilter(unsigned char R[WIDTH][HEIGHT], unsigned char G[WIDTH][HEIGH
 	}
 }
 
+/*randomly adds whit pixels across the image to simulate noise*/
 void Noise(int n, unsigned char R[WIDTH][HEIGHT], unsigned char G[WIDTH][HEIGHT], unsigned char B[WIDTH][HEIGHT]) { 
 	int x, y, px, i;
 	srand(time(NULL));
-	px = n * WIDTH * HEIGHT / 100;
+	px = n * WIDTH * HEIGHT / 100; /*finding the number of pixels to change*/
 	for(i=0; i<px; i++) {
-		x = rand() % WIDTH;
-		y = rand() % HEIGHT;
+		x = rand() % WIDTH;       /*randomizing the x coordinate of the pixel to change*/
+		y = rand() % HEIGHT;      /*randomizing the y coordinate of the pixel to change*/
 
-		R[x][y] = 255;
+		R[x][y] = 255;            /*assigning each coordinate the color white*/
 		G[x][y] = 255; 
 		B[x][y] = 255; 
 	}
@@ -36,12 +39,12 @@ void Posterize(unsigned char R[WIDTH][HEIGHT], unsigned char G[WIDTH][HEIGHT], u
 	for(y=0; y < HEIGHT; y++) { 
 		for(x=0; x < WIDTH; x++) { 
 			r=0, b=0, g=0;
-
+			/*iterating through n-1 bits*/
 			for(z=0; z<rbits-1; z++) { 
-				r = (r << 1) + 1;
+				r = (r << 1) + 1;	/*calculating the decimal value, for example, 63 = 11111*/
 			} 
-			R[x][y] = R[x][y] | r;
-			R[x][y] = R[x][y] & ~(1 << (rbits-1) );
+			R[x][y] = R[x][y] | r;	/*comparing 11111 using OR with the pixel value*/
+			R[x][y] = R[x][y] & ~(1 << (rbits-1) ); /*using AND to change the nth bit to 0*/
 
 			for(z=0; z<gbits-1; z++) { 
 				g = (g << 1) + 1; 

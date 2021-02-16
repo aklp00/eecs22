@@ -1,0 +1,118 @@
+Script started on Mon 15 Feb 2021 11:40:37 PM PST
+]0;apappu@crystalcove:hw3[apappu@crystalcove hw3]$ maek[K[Kke clean
+rm -f *.o 
+rm -f PhotoLab_v2 
+rm -f PhotoLabTest
+rm -f *.jpg aging.ppm edge.ppm negative.ppm noise.ppm posterize.ppm sharpen.ppm 
+rm -f libFilter.a 
+]0;apappu@crystalcove:hw3[apappu@crystalcove hw3]$ make 
+gcc PhotoLab_v2.c -Wall -ansi -std=c99 -c -o PhotoLab_v2.o
+gcc FileIO.c -Wall -ansi -std=c99 -c -o FileIO.o 
+gcc DIPs.c -Wall -ansi -std=c99 -c -o DIPs.o
+gcc Advanced.c -Wall -ansi -std=c99 -c -o Advanced.o
+ar rc libFilter.a DIPs.o Advanced.o 
+ranlib libFilter.a 
+gcc PhotoLab_v2.o DIPs.o FileIO.o Advanced.o -Wall -L. -lFilter -ansi -std=c99 -o PhotoLab_v2
+gcc PhotoLab_v2.c -Wall -ansi -std=c99 -DDEBUG -c -o PhotoLabTest.o 
+gcc PhotoLabTest.o FileIO.o DIPs.o Advanced.o -Wall -ansi -std=c99 -g -L. -lFilter -o PhotoLabTest  -DDEBUG 
+]0;apappu@crystalcove:hw3[apappu@crystalcove hw3]$ ./P
+PhotoLabTest* PhotoLab_v2*  
+]0;apappu@crystalcove:hw3[apappu@crystalcove hw3]$ ./PhotoLab_v3[K2
+
+-------------------------
+ 1: Load a PPM image
+ 2: Save the image in PPM and JPEG format
+ 3: Run aging filter
+ 4: Run edge detection filter
+ 5: Run sharpen filter
+ 6: Run noise filter
+ 7: Run posterize filter
+ 8: Run negative filter
+22: Test all functions
+99: Exit
+--------------------------
+Please make your choice: 22
+pigeon.ppm was read successfully!
+aging.ppm was saved successfully. 
+aging.jpg was stored for viewing. 
+pigeon.ppm was read successfully!
+edge.ppm was saved successfully. 
+edge.jpg was stored for viewing. 
+pigeon.ppm was read successfully!
+sharpen.ppm was saved successfully. 
+sharpen.jpg was stored for viewing. 
+pigeon.ppm was read successfully!
+noise.ppm was saved successfully. 
+noise.jpg was stored for viewing. 
+pigeon.ppm was read successfully!
+negative.ppm was saved successfully. 
+negative.jpg was stored for viewing. 
+pigeon.ppm was read successfully!
+posterize.ppm was saved successfully. 
+posterize.jpg was stored for viewing. 
+
+-------------------------
+ 1: Load a PPM image
+ 2: Save the image in PPM and JPEG format
+ 3: Run aging filter
+ 4: Run edge detection filter
+ 5: Run sharpen filter
+ 6: Run noise filter
+ 7: Run posterize filter
+ 8: Run negative filter
+22: Test all functions
+99: Exit
+--------------------------
+Please make your choice: 99
+Exiting program.
+]0;apappu@crystalcove:hw3[apappu@crystalcove hw3]$ make P
+PhotoLabTest*       PhotoLab_v1.c       PhotoLab_v2.c       PhotoLab_v2.script  
+PhotoLabTest.o      PhotoLab_v2*        PhotoLab_v2.o       
+]0;apappu@crystalcove:hw3[apappu@crystalcove hw3]$ make PhotoLabTest
+make: `PhotoLabTest' is up to date.
+]0;apappu@crystalcove:hw3[apappu@crystalcove hw3]$ ./P
+PhotoLabTest* PhotoLab_v2*  
+]0;apappu@crystalcove:hw3[apappu@crystalcove hw3]$ ./PhotoLabTest 
+pigeon.ppm was read successfully!
+aging.ppm was saved successfully. 
+aging.jpg was stored for viewing. 
+Aging tested!
+
+pigeon.ppm was read successfully!
+edge.ppm was saved successfully. 
+edge.jpg was stored for viewing. 
+Edge Detection tested!
+
+pigeon.ppm was read successfully!
+sharpen.ppm was saved successfully. 
+sharpen.jpg was stored for viewing. 
+Sharpen tested!
+
+pigeon.ppm was read successfully!
+noise.ppm was saved successfully. 
+noise.jpg was stored for viewing. 
+Noise tested!
+
+pigeon.ppm was read successfully!
+negative.ppm was saved successfully. 
+negative.jpg was stored for viewing. 
+Negative tested!
+
+pigeon.ppm was read successfully!
+posterize.ppm was saved successfully. 
+posterize.jpg was stored for viewing. 
+Posterize tested!
+
+]0;apappu@crystalcove:hw3[apappu@crystalcove hw3]$ touch Ada[Kvanced.c
+]0;apappu@crystalcove:hw3[apappu@crystalcove hw3]$ make P
+PhotoLabTest*       PhotoLab_v1.c       PhotoLab_v2.c       PhotoLab_v2.script  
+PhotoLabTest.o      PhotoLab_v2*        PhotoLab_v2.o       
+]0;apappu@crystalcove:hw3[apappu@crystalcove hw3]$ make PhotoLab_v2
+gcc Advanced.c -Wall -ansi -std=c99 -c -o Advanced.o
+ar rc libFilter.a DIPs.o Advanced.o 
+ranlib libFilter.a 
+gcc PhotoLab_v2.o DIPs.o FileIO.o Advanced.o -Wall -L. -lFilter -ansi -std=c99 -o PhotoLab_v2
+]0;apappu@crystalcove:hw3[apappu@crystalcove hw3]$ exit
+exit
+
+Script done on Mon 15 Feb 2021 11:41:28 PM PST
